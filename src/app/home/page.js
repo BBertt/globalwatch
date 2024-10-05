@@ -26,7 +26,7 @@ const page = () => {
       <h1>This is Home!</h1>
       <div>
         {posts.map(post => (
-        <div>{post.post}</div>
+        <div key={post.id}>{post.post}</div>
         ))}
     </div>
     </div>
