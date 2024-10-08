@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
+import Head from "next/head";
+
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,17 +17,19 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "GlobalWatch",
-  description: "Get updated on the latest news of Global Crisis and those that are in need.",
+  description:
+    "Get updated on the latest news of Global Crisis and those that are in need.",
 };
 
-export default function RootLayout({ children }) {
+const Layout = ({ children }) => {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <>
+        <Navbar />
+        <main>{children}</main>
+      </>
     </html>
   );
-}
+};
+
+export default Layout;

@@ -1,19 +1,34 @@
 import { getPosts } from "@/_actions/postAction";
+import Layout from "../layout";
 
-export default async function Home() {
+export default function Home() {
+  // const [data, setData] = useState([]);
+  // const [errMsg, setErrMsg] = useState("");
 
-  const { data, errMsg } = await getPosts();
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const { data, errMsg } = await getPosts();
+  //     if (errMsg) {
+  //       setErrMsg(errMsg);
+  //     } else {
+  //       setData(data);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
-  if(errMsg)
-    return <h1>{errMsg}</h1>
+  // if (errMsg) {
+  //   return (
+  //     <RootLayout>
+  //       <h1>{errMsg}</h1>
+  //     </RootLayout>
+  //   );
+  // }
 
   return (
-    <main>
-      {
-        data.map(item => (
-          <h1 key={item._id}>{item.msg}</h1>
-        ))
-      }
-    </main>
+    <Layout>
+      <h1>Welcome to My Next.js App</h1>
+      <p>This is the homepage of your Next.js application.</p>
+    </Layout>
   );
 }
