@@ -1,13 +1,18 @@
-import { redirect } from 'next/navigation'
-import React from 'react'
+import { redirect } from "next/navigation";
+import Layout from "./layout";
+import React from "react";
 
 const page = () => {
   return (
-    redirect('/home')
-  )
-}
+    <div>
+      <h1 className="mt-10">This will be the home page</h1>
+      <h1>Welcome to My Next.js App</h1>
+      <p>This is the homepage of your Next.js application.</p>
+    </div>
+  );
+};
 
-export default page
+export default page;
 
 // import { getPosts } from "@/_actions/postAction";
 

@@ -1,0 +1,26 @@
+.custom {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.25s ease-out;
+}
+
+.custom::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.custom:hover {
+  transform: scale(1.2);
+}
+
+.custom:hover::after {
+  transform: scaleX(1);
+}
