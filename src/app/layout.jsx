@@ -26,11 +26,12 @@ const Layout = ({ children }) => {
     <html lang="en">
       <body>
         <>
-          <Navbar />
-          <main>{children}</main>
+          <div className="min-h-screen">
+            <Navbar />
+            <main className="container mx-auto px-4">{children}</main>
+          </div>
         </>
       </body>
-
     </html>
   );
 };
