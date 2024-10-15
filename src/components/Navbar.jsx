@@ -43,6 +43,12 @@ const Navbar = () => {
             href="/"
             className={`${styles.custom} text-gray-800 font-medium `}
           >
+            Home
+          </Link>
+          <Link
+            href="/"
+            className={`${styles.custom} text-gray-800 font-medium `}
+          >
             News
           </Link>
           <Link
