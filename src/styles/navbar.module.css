@@ -1,7 +1,11 @@
 .custom {
   position: relative;
-  display: inline-block;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   transition: transform 0.25s ease-out;
+  padding: 0.25rem 0.25rem; /* Smaller padding */
+  line-height: 1; /* Compact the text */
 }
 
 .custom::after {
@@ -11,14 +15,14 @@
   height: 2px;
   background: currentColor;
   left: 0;
-  bottom: -5px;
+  bottom: -2px; /* Closer underline */
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease-out;
 }
 
 .custom:hover {
-  transform: scale(1.2);
+  transform: scale(1.05); /* Subtle scaling effect */
 }
 
 .custom:hover::after {
