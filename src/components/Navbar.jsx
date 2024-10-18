@@ -1,14 +1,13 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import styles from "styles/navbar.module.css";
 import "@/styles/globals.css";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
-import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
+import { useState, useEffect } from "react";
+import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Navbar = () => {
-
   const { data: session } = useSession();
 
   const [providers, setProviders] = useState(null);
@@ -18,10 +17,10 @@ const Navbar = () => {
       const response = await getProviders();
 
       setProviders(response);
-    }
+    };
 
     setUpProviders();
-  }, [])
+  }, []);
 
   return (
     <nav className="bg-white shadow-md">
@@ -46,7 +45,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/"
+            href="/news"
             className={`${styles.custom} text-gray-800 font-medium `}
           >
             News
@@ -76,30 +75,32 @@ const Navbar = () => {
             About Us
           </Link>
 
-          
-
           {session?.user ? (
             <div className="flex space-x-8">
-              <button type='button' onClick={signOut} className='outline_btn'>
+              <button type="button" onClick={signOut} className="outline_btn">
                 Sign Out
               </button>
-              <Link href='/profile'>
-                <Image 
+              <Link href="/profile">
+                <Image
                   src={session?.user.image}
-                  width={36} height={36}
-                  className='rounded-full' alt='profile'
+                  width={36}
+                  height={36}
+                  className="rounded-full"
+                  alt="profile"
                 />
               </Link>
             </div>
-          ): (
+          ) : (
             <>
               {providers &&
                 Object.values(providers).map((provider) => (
-                  <button type='button' key={provider.name} onClick={() => signIn(provider.id)}
-                  className='black_btn'>
-  
-                  Sign In
-  
+                  <button
+                    type="button"
+                    key={provider.name}
+                    onClick={() => signIn(provider.id)}
+                    className="black_btn"
+                  >
+                    Sign In
                   </button>
                 ))}
             </>

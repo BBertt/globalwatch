@@ -9,6 +9,7 @@ export const newsData = [
     excerpt:
       "Scientists, tech entrepreneurs and educators on both sides of the border describe the devastation of lost homes, destroyed laboratories and slain colleagues.",
     link: "https://www.youtube.com/",
+    main: true,
   },
   {
     id: "2",
