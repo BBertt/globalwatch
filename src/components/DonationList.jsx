@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import Image from "next/image";
 
 const DonationList = ({ data, handleView }) => {
   return (
@@ -13,9 +14,18 @@ const DonationList = ({ data, handleView }) => {
             className="bg-gray-200 p-6 rounded-lg shadow-lg hover:bg-blue-300 transition duration-300 cursor-pointer group"
             onClick={() => handleView && handleView(donation)}
           >
-            <h3 className="text-center text-lg font-semibold text-gray-800 group-hover:text-white">
-              {donation.title}
-            </h3>
+            <div className="flex items-center space-x-4">
+              <Image
+                src="/assets/icons/globe.png"
+                alt="logo"
+                width={40}
+                height={40}
+                className="rounded-full object-contain"
+              />
+              <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white">
+                {donation.title}
+              </h3>
+            </div>
           </div>
         ))}
       </div>
