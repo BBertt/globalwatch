@@ -12,6 +12,9 @@ export const HoverEffect = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
+  const displayedFirstRowItems = firstRowItems.slice(0, 3);
+  const displayedSecondRowItems = secondRowItems.slice(0, 3);
+
   return (
     <div
       className={`container mx-auto grid grid-cols-3 gap-6 py-10 ${className}`}
@@ -45,7 +48,7 @@ export const HoverEffect = ({
       </div>
 
       <div className="col-span-2 grid grid-cols-3 gap-4">
-        {firstRowItems.map((item, idx) => (
+        {displayedFirstRowItems.map((item, idx) => (
           <Link
             href={`/news/${item.id}`}
             key={item.key}
@@ -76,7 +79,7 @@ export const HoverEffect = ({
       </div>
 
       <div className="col-span-2 grid grid-cols-3 gap-4">
-        {secondRowItems.map((item, idx) => (
+        {displayedSecondRowItems.map((item, idx) => (
           <Link
             href={`/news/${item.id}`}
             key={item.key}
@@ -132,43 +135,15 @@ export const Card = ({ item }) => {
             main ? "text-white" : "text-gray-500"
           } mt-auto text-xs text-gray-500 flex justify-between gap-2`}
         >
-          <span
+          <p
             className={`${
-              main ? "bg-gray-400 text-white" : "bg-theme text-white"
-            } rounded-full p-2`}
+              main ? " text-white font-bold" : ""
+            } text-sm text-gray-500 mb-2`}
           >
-            {author}
-          </span>
-          <span
-            className={`${
-              main ? "bg-gray-400 text-white" : "bg-theme text-white"
-            } rounded-full p-2`}
-          >
-            {date}
-          </span>
+            {date} | {author}
+          </p>
         </div>
       </div>
     </div>
-  );
-};
-
-export const CardTitle = ({ className, children }) => {
-  return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
-      {children}
-    </h4>
-  );
-};
-
-export const CardDescription = ({ className, children }) => {
-  return (
-    <p
-      className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
-        className
-      )}
-    >
-      {children}
-    </p>
   );
 };
