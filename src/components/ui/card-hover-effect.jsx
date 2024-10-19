@@ -23,7 +23,7 @@ export const HoverEffect = ({
           transition={{ duration: 0.3 }}
         >
           <Link
-            href={mainItem.link}
+            href={`/news/${mainItem.id}`}
             className="relative block h-full bg-theme rounded-lg overflow-hidden"
             onMouseEnter={() => setHoveredIndex(0)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -47,7 +47,7 @@ export const HoverEffect = ({
       <div className="col-span-2 grid grid-cols-3 gap-4">
         {firstRowItems.map((item, idx) => (
           <Link
-            href={item.link}
+            href={`/news/${item.id}`}
             key={item.key}
             className="relative group block"
             onMouseEnter={() => setHoveredIndex(idx + 1)}
@@ -78,7 +78,7 @@ export const HoverEffect = ({
       <div className="col-span-2 grid grid-cols-3 gap-4">
         {secondRowItems.map((item, idx) => (
           <Link
-            href={item.link}
+            href={`/news/${item.id}`}
             key={item.key}
             className="relative group block"
             onMouseEnter={() => setHoveredIndex(idx + 4)}
