@@ -8,8 +8,8 @@ export const GET = async (request) => {
     await connectToDB();
     const donations = await Donation.find({});
 
-    return new Response(JSON.stringify(donations), { status: 200 });
-  } catch (error) {
-    return new Response("Failed to fetch all donations.", { status: 500 });
-  }
-};
+        return new Response(JSON.stringify(donations), { status: 200 });
+    } catch (error) {
+        return new Response("Failed to fetch all donations.", { status: 500 });
+    }
+}
