@@ -63,7 +63,7 @@ const Navbar = () => {
             Donations
           </Link>
           <Link
-            href="/guides"
+            href="/guide"
             className={`${styles.custom} text-gray-800 font-medium `}
           >
             Guides
