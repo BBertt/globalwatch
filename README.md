@@ -12,8 +12,8 @@ GlobalWatch membantu menyelesaikan dua Tujuan Pembangunan Berkelanjutan (SDGs):
 4. Lakukan steps berikut di terminal untuk memastikan bahwa dependencies telah ada:
 	- `npm install framer-motion clsx tailwind-merge`
 	- `npm install bcrpyt mongodb mongoose next-auth`
-6. Untuk dijalankan lakukan `npm run dev` di terminal.
-7. lanjut ke browser dan ke website `http://localhost:3000`.
+5. Untuk dijalankan lakukan `npm run dev` di terminal.
+6. lanjut ke browser dan ke website `http://localhost:3000`.
 
 # Features available
 - **News Media Fokus Krisis**: Pengguna dapat mengakses berita tentang krisis global dengan informasi mengenai daerah dan kejadian tertentu.
