@@ -114,13 +114,15 @@ const page = () => {
   };
 
   return (
-    <DonationItem
+    <Suspense fallback={<div>Loading...</div>}>
+      <DonationItem
       donation={donation}
       userDonation={userDonation}
       setUserDonation={setUserDonation}
       submitting={submitting}
       handleDonate={handleDonate}
     />
+    </Suspense>
   );
 };
 
