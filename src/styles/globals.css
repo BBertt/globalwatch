@@ -26,6 +26,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .glow-effect {
+    box-shadow: 0 0 15px 3px rgba(66, 153, 225, 0.6); 
+  }
+  
 }
 
 .black_btn {
@@ -47,3 +51,4 @@ body {
 .body_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-3xl;
 }
+
