@@ -22,6 +22,7 @@ const ArticlesPage = () => {
               <p className="text-sm text-gray-500 mb-4">{article.date} | {article.author}</p>
               <p className="text-base text-gray-700 mb-4">{article.excerpt}</p>
 
+              {/* Fixed Link */}
               <Link href={`/articles/${article.id}`} className="text-blue-500 hover:underline font-semibold">
                 Read More
               </Link>
