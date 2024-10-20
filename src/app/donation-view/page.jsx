@@ -3,12 +3,13 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
+import { signIn, getProviders } from "next-auth/react";
 
 import DonationItem from "@/components/DonationItem";
 
 const page = () => {
     const router = useRouter();
-    const { data: session } = useSession();
+    const { data: session, status } = useSession();
     const searchParams = useSearchParams();
     const donationId = searchParams.get('id');
 
@@ -19,6 +20,17 @@ const page = () => {
     });
 
     const [submitting, setSubmitting] = useState(false);
+    const [providers, setProviders] = useState(null);
+
+    useEffect(() => {
+      const setUpProviders = async () => {
+        const response = await getProviders();
+  
+        setProviders(response);
+      };
+  
+      if (!session && status != "loading") setUpProviders();
+    }, [session, status]);
 
     useEffect(() => {
       const getDonationItem = async() => {
@@ -45,6 +57,13 @@ const page = () => {
       e.preventDefault();
       setSubmitting(true);
 
+      if (!session) {
+        if (providers) {
+          signIn(Object.keys(providers)[0]);
+        }
+        return;
+      }
+
       try {
         const response = await fetch('api/userdonation/new', {
           method: 'POST',
@@ -57,7 +76,7 @@ const page = () => {
         });
 
         if (response.ok) {
-          router.push('/');
+          router.push('/profile');
         }
       } catch (error) {
         console.log(error);
