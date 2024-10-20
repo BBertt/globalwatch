@@ -31,7 +31,7 @@ const DonationList = ({ data, handleView }) => {
                 Beneficiary: {donation.beneficiary}
               </p>
               <p className="text-sm text-gray-600">
-                Rp {donation.raisedAmount.toLocaleString()} / Rp{" "}
+                $ {donation.raisedAmount.toLocaleString()} / ${" "}
                 {donation.goalAmount.toLocaleString()}
               </p>
               <div className="relative w-full h-4 bg-gray-300 rounded-full mt-2 overflow-hidden">

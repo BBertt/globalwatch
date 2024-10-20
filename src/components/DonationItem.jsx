@@ -22,7 +22,7 @@ const DonationItem = ({
 
         <input
           type="number"
-          step="10000"
+          step="10"
           onChange={(e) =>
             setUserDonation({ ...userDonation, amount: e.target.value })
           }
