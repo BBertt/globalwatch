@@ -5,7 +5,7 @@ const Page = () => {
   return (
     <div className="container mx-auto p-6">
       <div className="flex justify-start mt-4">
-        <h1 className="text-2xl font-bold cursor-pointer hover:underline underline-offset-8">
+        <h1 className="blue_gradient_border text-4xl font-bold cursor-pointer">
           Related News
         </h1>
       </div>

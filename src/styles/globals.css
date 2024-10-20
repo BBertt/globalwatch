@@ -40,12 +40,41 @@ body {
   @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
 
+.blue_gradient_border {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent relative;
+}
+
+.blue_gradient_border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #2563eb, #0ea5e9);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  transform: scaleX(0);
+}
+
+.blue_gradient_border:hover::after {
+  transform: scaleX(1);
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
 .head_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
 }
 
 .body_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-3xl;
+  @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-3xl;
 }
 
 .header_about {
