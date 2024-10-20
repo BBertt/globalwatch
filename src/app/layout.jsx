@@ -15,7 +15,9 @@ const Layout = ({ children }) => {
         <Provider>
           <main>
             <Navbar />
-            {children}
+            <div className="overflow-auto">
+              {children}
+            </div>
           </main>
         </Provider>
       </body>
