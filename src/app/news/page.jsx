@@ -1,15 +1,32 @@
+"use client";
 import { ExpandableCard } from "@/components/ui/ExpandableCards";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const news = () => {
+const News = () => {
+  const [animateUnderline, setAnimateUnderline] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimateUnderline(true);
+    }, 500);
+  }, []);
+
   return (
     <div className="container mx-auto p-4 md:p-6 h-full">
-      <h1 className="head_text text-center font-bold mb-4">
-        <span className="blue_gradient">News</span>
-      </h1>
+      <div className="relative">
+        <h1 className="head_text text-center font-bold mb-4">
+          <span className="blue_gradient">News</span>
+        </h1>
+        {/* Underline Effect */}
+        <span
+          className={`block w-32 h-1 bg-blue-600 mx-auto mt-2 rounded ${
+            animateUnderline ? "animate-underline-disappear" : ""
+          }`}
+        ></span>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start mt-8">
         {/* Left  */}
         <div className="hidden md:col-span-2 md:flex bg-black justify-center items-center"></div>
 
@@ -38,4 +55,4 @@ const news = () => {
   );
 };
 
-export default news;
+export default News;
