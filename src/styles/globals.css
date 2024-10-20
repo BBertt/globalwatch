@@ -26,6 +26,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .glow-effect {
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.7); 
+  }
+  
 }
 
 .black_btn {
@@ -83,4 +87,23 @@ body {
 
 .detail_text {
   @apply mt-5 text-3xl font-medium leading-[1.25] text-gray-500 sm:text-xl;
+}
+@keyframes underlineDisappear {
+  0% {
+    width: 40px;
+    height: 6px;
+  }
+  50% {
+    width: 300px;
+    height: 3px; 
+  }
+  100% {
+    width: 600px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+.animate-underline-disappear {
+  animation: underlineDisappear 4s ease forwards;
 }
