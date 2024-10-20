@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 import { articlesData } from "@/data/articlesData";
 import { useParams } from "next/navigation";
 
@@ -9,10 +10,11 @@ const ArticleDetail = () => {
   const { id } = params;
   const [article, setArticle] = useState(null);
   const [loading, setLoading] = useState(true);
+  const router = useRouter(); // Use router for navigation
 
   useEffect(() => {
     if (id) {
-      const foundArticle = articlesData.find((item) => item.id === Number(id)); // Ensure correct ID type
+      const foundArticle = articlesData.find((item) => item.id === id);
       if (foundArticle) {
         setArticle(foundArticle);
       }
@@ -34,6 +36,14 @@ const ArticleDetail = () => {
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
+      {/* Back Button */}
+      <button
+        onClick={() => router.back()} // This will take the user back to the previous page
+        className="mb-4 p-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded"
+      >
+        &larr; Back
+      </button>
+
       {/* Title Section */}
       <h1 className="text-5xl font-extrabold mb-6">{article.title}</h1>
       <p className="text-sm text-gray-500 mb-2">
