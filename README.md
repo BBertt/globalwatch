@@ -12,7 +12,6 @@ GlobalWatch membantu menyelesaikan dua Tujuan Pembangunan Berkelanjutan (SDGs):
 4. Lakukan steps berikut di terminal untuk memastikan bahwa dependencies telah ada:
 	- `npm install framer-motion clsx tailwind-merge`
 	- `npm install bcrpyt mongodb mongoose next-auth`
-5. Dari file `env.txt` buatlah file `.env` di root folder `globalwatch`, setelah itu file `.env` diisi dengan data dari `env.txt`.
 6. Untuk dijalankan lakukan `npm run dev` di terminal.
 7. lanjut ke browser dan ke website `http://localhost:3000`.
 
