@@ -7,7 +7,7 @@ const UserDonationList = ({ donations }) => {
         {donations.length > 0 ? (
           <ul className="space-y-4">
             {donations.map((donationDetail, index) => (
-              <li key={index} className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
+              <li key={index} className="bg-white shadow-lg rounded-lg p-6 border-2 border-blue-500">
                 <h2 className="text-lg font-bold mb-2 text-blue-600">
                   {donationDetail.donation.title}
                 </h2>
