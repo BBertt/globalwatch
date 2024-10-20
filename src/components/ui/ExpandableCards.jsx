@@ -103,7 +103,6 @@ export function ExpandableCard() {
                   <motion.a
                     layoutId={`button-${active.title}-${id}`}
                     href={`/news/${active.id}`}
-                    target="_blank"
                     className="px-4 py-3 text-sm rounded-full font-bold bg-blue-500 text-white w-fit"
                   >
                     Read
@@ -122,7 +121,6 @@ export function ExpandableCard() {
             onClick={() => setActive(news)}
             className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer group w-full"
           >
-            {/* Image on the left */}
             <motion.div
               layoutId={`image-${news.title}-${id}`}
               className="w-[200px] h-[125px] overflow-hidden rounded-lg"
@@ -136,7 +134,6 @@ export function ExpandableCard() {
               />
             </motion.div>
 
-            {/* Container for the text and button on the right */}
             <div className="ml-4 w-full flex flex-col justify-between">
               <div className="w-full">
                 <motion.h3

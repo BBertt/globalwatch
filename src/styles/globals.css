@@ -64,6 +64,27 @@ body {
   transform: scaleX(1);
 }
 
+.orange_gradient_border {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent relative;
+}
+
+.orange_gradient_border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #f59e0b, #f97316, #facc15);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  transform: scaleX(0);
+}
+
+.orange_gradient_border:hover::after {
+  transform: scaleX(1);
+}
+
 .orange_gradient {
   @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
 }
@@ -109,4 +130,10 @@ body {
 
 .blue_orange_div {
   @apply bg-gradient-to-r from-blue-600 via-orange-600 to-yellow-500 rounded-lg;
+}
+
+@layer utilities {
+  .border-gradient-orange {
+    border-image: linear-gradient(to bottom, #f59e0b, #d97706, #fbbf24) 1;
+  }
 }
