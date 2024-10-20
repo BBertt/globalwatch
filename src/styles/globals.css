@@ -27,9 +27,8 @@ body {
     text-wrap: balance;
   }
   .glow-effect {
-    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.7);
   }
-  
 }
 
 .black_btn {
@@ -95,7 +94,7 @@ body {
   }
   50% {
     width: 300px;
-    height: 3px; 
+    height: 3px;
   }
   100% {
     width: 600px;
@@ -106,4 +105,8 @@ body {
 
 .animate-underline-disappear {
   animation: underlineDisappear 4s ease forwards;
+}
+
+.blue_orange_div {
+  @apply bg-gradient-to-r from-blue-600 via-orange-600 to-yellow-500 rounded-lg;
 }

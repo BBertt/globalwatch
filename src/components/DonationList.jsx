@@ -26,6 +26,26 @@ const DonationList = ({ data, handleView }) => {
                 {donation.title}
               </h3>
             </div>
+            <div className="mt-4">
+              <p className="text-sm text-gray-600">
+                Beneficiary: {donation.beneficiary}
+              </p>
+              <p className="text-sm text-gray-600">
+                Rp {donation.raisedAmount.toLocaleString()} / Rp{" "}
+                {donation.goalAmount.toLocaleString()}
+              </p>
+              <div className="relative w-full h-4 bg-gray-300 rounded-full mt-2 overflow-hidden">
+                {" "}
+                <div
+                  className="absolute top-0 left-0 h-full blue_orange_div rounded-full"
+                  style={{
+                    width: `${
+                      (donation.raisedAmount / donation.goalAmount) * 100
+                    }%`,
+                  }}
+                />
+              </div>
+            </div>
           </div>
         ))}
       </div>
