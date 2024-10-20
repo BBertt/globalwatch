@@ -18,7 +18,6 @@ const News = () => {
         <h1 className="head_text text-center font-bold mb-4">
           <span className="blue_gradient">News</span>
         </h1>
-        {/* Underline Effect */}
         <span
           className={`block w-32 h-1 bg-blue-600 mx-auto mt-2 rounded ${
             animateUnderline ? "animate-underline-disappear" : ""
@@ -27,15 +26,12 @@ const News = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start mt-8">
-        {/* Left  */}
         <div className="hidden md:col-span-2 md:flex bg-black justify-center items-center"></div>
 
-        {/* Mid  */}
         <div className="col-span-12 md:col-span-8 flex flex-col justify-center">
           <ExpandableCard />
         </div>
 
-        {/* Right  */}
         <div className="col-span-12 md:col-span-2 bg-theme flex flex-col items-center justify-center p-4">
           <h2 className="text-lg font-bold text-white mb-4 text-center md:text-left">
             Support Our Cause

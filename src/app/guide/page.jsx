@@ -18,7 +18,6 @@ export default function GuidePage() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-8 flex flex-col items-center">
-      {/* Getting Started Section */}
       <section className="mb-12 w-full max-w-3xl bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md">
         <div
           className="cursor-pointer text-center"
@@ -53,7 +52,6 @@ export default function GuidePage() {
         </motion.div>
       </section>
 
-      {/* Advanced Tips Section */}
       <section className="mb-12 w-full max-w-3xl bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md">
         <div
           className="cursor-pointer text-center"
@@ -87,7 +85,6 @@ export default function GuidePage() {
         </motion.div>
       </section>
 
-      {/* FAQ Section - Now Entire FAQ is Collapsible */}
       <section className="mb-12 w-full max-w-3xl bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md">
         <div
           className="cursor-pointer text-center"
