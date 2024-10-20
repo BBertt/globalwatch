@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { faqs } from "@/data/faq";
 
 export default function GuidePage() {
   const [openSection, setOpenSection] = useState(null);
@@ -14,24 +15,6 @@ export default function GuidePage() {
   const toggleFAQ = (index) => {
     setOpenFAQIndex(openFAQIndex === index ? null : index);
   };
-
-  const faqs = [
-    {
-      question: "How do I create an account?",
-      answer:
-        "Click the 'Sign Up' button on the homepage and fill out the required information. Once you've verified your email, your account will be ready to use.",
-    },
-    {
-      question: "How can I reset my password?",
-      answer:
-        "To reset your password, click the 'Forgot Password' link on the login page and follow the instructions sent to your email.",
-    },
-    {
-      question: "How do I contact support?",
-      answer:
-        "You can contact support by navigating to the 'Help' section and filling out the contact form. Our team will get back to you as soon as possible.",
-    },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
@@ -60,10 +43,7 @@ export default function GuidePage() {
           </p>
           <ol className="list-decimal mt-6 pl-5 space-y-4">
             <li>Create an account by clicking the "Sign Up" button.</li>
-            <li>
-              Verify your email address by following the link in your inbox.
-            </li>
-            <li>Set up your profile and customize your preferences.</li>
+            <li>Choose your email that will be used to create an account.</li>
             <li>Explore the platform and start engaging with content.</li>
           </ol>
           <p className="mt-6 text-lg leading-relaxed text-center">
@@ -99,20 +79,30 @@ export default function GuidePage() {
           </p>
           <ul className="list-disc mt-6 pl-5 space-y-4">
             <li>
-              Customize your dashboard to focus on the features you use most.
+              Subscribe to real-time alerts to stay updated on the latest global
+              crises like forest fires, famine, and natural disasters.
             </li>
             <li>
-              Take advantage of keyboard shortcuts to navigate the platform
-              faster.
+              Set up custom notifications for specific regions or disaster types
+              to stay informed on the topics you care about the most.
             </li>
-            <li>Enable two-factor authentication for enhanced security.</li>
             <li>
-              Use our API to integrate the platform with your own applications.
+              Easily track your donation history and impact through our
+              platform’s personalized dashboard.
+            </li>
+            <li>
+              Use the "Share" feature to help raise awareness by sharing news
+              articles or donation links with your friends and family.
+            </li>
+            <li>
+              Leverage our API to integrate real-time disaster updates into your
+              own website or application, amplifying the reach of critical
+              information.
             </li>
           </ul>
           <p className="mt-6 text-lg leading-relaxed text-center">
-            By using these tips, you'll be able to optimize your workflow and
-            get even more value from our platform.
+            By using these tips, you can stay informed, help others, and
+            maximize your impact through donations and advocacy.
           </p>
         </motion.div>
       </section>
