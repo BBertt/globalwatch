@@ -69,7 +69,10 @@ export function ExpandableCard() {
               ref={ref}
               className="w-full max-w-[800px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`} className="w-full">
+              <motion.div
+                layoutId={`image-${active.title}-${id}`}
+                className="w-full"
+              >
                 <Image
                   priority
                   width={800}
@@ -120,10 +123,13 @@ export function ExpandableCard() {
             className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer group w-full"
           >
             {/* Image on the left */}
-            <motion.div layoutId={`image-${news.title}-${id}`} className="w-[400px] h-[250px] overflow-hidden rounded-lg">
+            <motion.div
+              layoutId={`image-${news.title}-${id}`}
+              className="w-[200px] h-[125px] overflow-hidden rounded-lg"
+            >
               <Image
-                width={400}
-                height={250}
+                width={200}
+                height={125}
                 src={news.image}
                 alt={news.title}
                 className="w-full h-full object-cover object-center"
@@ -135,7 +141,7 @@ export function ExpandableCard() {
               <div className="w-full">
                 <motion.h3
                   layoutId={`title-${news.title}-${id}`}
-                  className="text-black group-hover:text-white text-left body_text"
+                  className="text-black group-hover:text-white text-left text-2xl font-bold"
                 >
                   {news.title}
                 </motion.h3>
@@ -147,7 +153,6 @@ export function ExpandableCard() {
                 </motion.p>
               </div>
 
-              {/* Button positioned at the bottom-right */}
               <motion.button
                 layoutId={`button-${news.title}-${id}`}
                 className="mt-2 px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-blue-500 hover:text-white text-black self-end"

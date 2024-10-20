@@ -17,9 +17,9 @@ export const HoverEffect = ({
 
   return (
     <div
-      className={`container mx-auto grid grid-cols-3 gap-6 py-10 ${className}`}
+      className={`container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-10 ${className}`}
     >
-      <div className="col-span-1 row-span-2 h-full">
+      <div className="col-span-1 lg:row-span-2 h-full">
         <motion.div
           className="relative h-full w-full"
           whileHover={{ scale: 1.05 }}
@@ -47,7 +47,8 @@ export const HoverEffect = ({
         </motion.div>
       </div>
 
-      <div className="col-span-2 grid grid-cols-3 gap-4">
+      {/* Display for the first row of items */}
+      <div className="col-span-1 sm:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
         {displayedFirstRowItems.map((item, idx) => (
           <Link
             href={`/news/${item.id}`}
@@ -78,7 +79,8 @@ export const HoverEffect = ({
         ))}
       </div>
 
-      <div className="col-span-2 grid grid-cols-3 gap-4">
+      {/* Display for the second row of items */}
+      <div className="col-span-1 sm:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
         {displayedSecondRowItems.map((item, idx) => (
           <Link
             href={`/news/${item.id}`}
