@@ -47,3 +47,11 @@ body {
 .body_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-3xl;
 }
+
+.header_about {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-indigo-600 sm:text-3xl;
+}
+
+.detail_text {
+  @apply mt-5 text-3xl font-medium leading-[1.25] text-gray-500 sm:text-xl;
+}
