@@ -396,12 +396,9 @@ export function GlobeDemo() {
 
   return (
     <div className="relative flex items-center justify-center h-screen w-full">
-      {/* This div will hold the globe, moved upwards with negative margin */}
       <div className="relative w-[600px] h-[600px] md:w-[800px] md:h-[800px] z-10 -mt-20 md:-mt-32">
         <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
-
-      {/* This div will hold the centered text */}
       <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
         <h1 className="head_text text-center text-white"><span className="orange_gradient">Stay Informed, Act Globally.</span></h1>
       </div>

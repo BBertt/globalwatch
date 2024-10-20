@@ -54,7 +54,6 @@ export default function GuidePage() {
           </motion.div>
         </section>
 
-        {/* Tsunami Guide Section */}
         <section className="mb-12 w-full max-w-3xl">
           <div
             className="cursor-pointer text-center"
@@ -83,7 +82,6 @@ export default function GuidePage() {
           </motion.div>
         </section>
 
-        {/* Flood Guide Section */}
         <section className="mb-12 w-full max-w-3xl">
           <div
             className="cursor-pointer text-center"
@@ -112,7 +110,6 @@ export default function GuidePage() {
           </motion.div>
         </section>
 
-        {/* Wildfire Guide Section */}
         <section className="mb-12 w-full max-w-3xl">
           <div
             className="cursor-pointer text-center"

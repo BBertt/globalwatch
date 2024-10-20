@@ -6,12 +6,12 @@ import "@/styles/globals.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons for hamburger menu
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const { data: session } = useSession();
   const [providers, setProviders] = useState(null);
-  const [menuOpen, setMenuOpen] = useState(false); // State to toggle mobile menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const setUpProviders = async () => {
@@ -24,7 +24,6 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
         <div className="flex items-center space-x-1 font-bold">
           <div>
             <Image
@@ -38,7 +37,6 @@ const Navbar = () => {
           <div className="flex items-center justify-center">GlobalWatch</div>
         </div>
 
-        {/* Hamburger Icon */}
         <div className="block sm:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -48,7 +46,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Links - hidden on small screens, shows when hamburger menu is clicked */}
         <div
           className={`${
             menuOpen ? "block" : "hidden"
