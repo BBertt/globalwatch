@@ -7,7 +7,7 @@ import { signIn, getProviders } from "next-auth/react";
 
 import DonationItem from "@/components/DonationItem";
 
-const page = () => {
+const DonationView = () => {
   const router = useRouter();
   const { data: session, status } = useSession();
   const searchParams = useSearchParams();
@@ -114,16 +114,20 @@ const page = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <DonationItem
+    <DonationItem
       donation={donation}
       userDonation={userDonation}
       setUserDonation={setUserDonation}
       submitting={submitting}
       handleDonate={handleDonate}
     />
-    </Suspense>
   );
 };
 
-export default page;
+export const DonationViewPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <DonationView />
+    </Suspense>
+  );
+}
