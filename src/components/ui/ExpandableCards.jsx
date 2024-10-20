@@ -101,7 +101,7 @@ export function ExpandableCard() {
                     layoutId={`button-${active.title}-${id}`}
                     href={`/news/${active.id}`}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-blue-500 text-white"
                   >
                     Read
                   </motion.a>
@@ -117,22 +117,24 @@ export function ExpandableCard() {
             layoutId={`card-${news.title}-${id}`}
             key={news.id}
             onClick={() => setActive(news)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer group"
           >
             <div className="flex gap-4 flex-col md:flex-row">
-              <motion.div layoutId={`image-${news.title}-${id}`}>
+            <motion.div layoutId={`image-${news.title}-${id}`}>
+              <div className="w-[200px] h-[150px] overflow-hidden rounded-lg">
                 <Image
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={150}
                   src={news.image}
                   alt={news.title}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
-              </motion.div>
+              </div>
+            </motion.div>
               <div className="">
                 <motion.h3
                   layoutId={`title-${news.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-black group-hover:text-white text-center md:text-left"
                 >
                   {news.title}
                 </motion.h3>
@@ -146,7 +148,7 @@ export function ExpandableCard() {
             </div>
             <motion.button
               layoutId={`button-${news.title}-${id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0"
+              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-blue-500 hover:text-white text-black mt-4 md:mt-0"
             >
               Read More
             </motion.button>
