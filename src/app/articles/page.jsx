@@ -1,6 +1,6 @@
-import { HoverEffect } from "@/components/ui/card-hover-effect-articles"; // Import the HoverEffect
-import { articlesData } from "@/data/articlesData"; // Import your articles data
-import Link from "next/link"; // Import Link from Next.js
+import { HoverEffect } from "@/components/ui/card-hover-effect-articles";
+import { articlesData } from "@/data/articlesData";
+import Link from "next/link";
 
 const ArticlesPage = () => {
   const items = articlesData.map((article) => ({
@@ -14,9 +14,10 @@ const ArticlesPage = () => {
 
   return (
     <div className="container mx-auto p-6 max-w-6xl">
-      <h1 className="text-4xl font-bold mb-8 text-center">Articles</h1>
-      
-      {/* Use HoverEffect to display the articles with hover animations */}
+      <h1 className="font-bold mb-8 text-center head_text">
+        <span className="blue_gradient">Articles</span>
+      </h1>
+
       <HoverEffect items={items} className="gap-1" />
     </div>
   );
