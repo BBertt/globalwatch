@@ -24,11 +24,11 @@ export const HoverEffect = ({ items, className }) => {
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          {/* AnimatePresence handles hover background */}
+          
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-gray-100/70 rounded-lg"
+                className="absolute inset-0 h-full w-full bg-gray-100/20 rounded-lg z-10"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.2 } }}
@@ -39,7 +39,7 @@ export const HoverEffect = ({ items, className }) => {
 
           {/* Minimalistic card with refined shadow and flex layout */}
           <Card hovered={hoveredIndex === idx}>
-            <div className="flex flex-col h-full">
+            <div className="relative z-0 flex flex-col h-full">
               <div className="relative h-48 w-full mb-4 flex-shrink-0">
                 <Image
                   src={item.image}
@@ -76,7 +76,7 @@ export const Card = ({ hovered, className, children }) => {
       className={cn(
         "rounded-lg p-6 bg-white border border-gray-200 transition-all duration-300 transform flex flex-col h-full",
         hovered
-          ? "shadow-lg scale-105 border-transparent"
+          ? "shadow-lg scale-105 border-transparent glow-effect" 
           : "shadow-sm"
       )}
     >
@@ -87,12 +87,7 @@ export const Card = ({ hovered, className, children }) => {
 
 export const CardTitle = ({ className, children }) => {
   return (
-    <h4
-      className={cn(
-        "text-xl font-semibold text-gray-800 mb-2",
-        className
-      )}
-    >
+    <h4 className={cn("text-xl font-semibold text-gray-800 mb-2", className)}>
       {children}
     </h4>
   );
@@ -100,12 +95,7 @@ export const CardTitle = ({ className, children }) => {
 
 export const CardDescription = ({ className, children }) => {
   return (
-    <p
-      className={cn(
-        "text-base text-gray-600 leading-relaxed",
-        className
-      )}
-    >
+    <p className={cn("text-base text-gray-600 leading-relaxed", className)}>
       {children}
     </p>
   );
