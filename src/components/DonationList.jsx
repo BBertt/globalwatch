@@ -11,7 +11,7 @@ const DonationList = ({ data, handleView }) => {
         {data.map((donation) => (
           <div
             key={donation._id}
-            className="bg-gray-200 p-6 rounded-lg shadow-lg hover:bg-blue-300 transition duration-300 cursor-pointer group"
+            className="bg-gray-200 p-6 rounded-lg shadow-lg hover:bg-blue-500 border-2 border-blue-500 transition duration-300 cursor-pointer group"
             onClick={() => handleView && handleView(donation)}
           >
             <div className="flex items-center space-x-4">
