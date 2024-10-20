@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { signIn, getProviders } from "next-auth/react";
 
 import DonationItem from "@/components/DonationItem";
@@ -124,10 +124,10 @@ const DonationView = () => {
   );
 };
 
-export const DonationViewPage = () => {
+export default function DonationViewPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <DonationView />
     </Suspense>
   );
-}
+};
