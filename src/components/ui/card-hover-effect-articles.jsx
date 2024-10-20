@@ -37,7 +37,6 @@ export const HoverEffect = ({ items, className }) => {
             )}
           </AnimatePresence>
 
-          {/* Minimalistic card with refined shadow and flex layout */}
           <Card hovered={hoveredIndex === idx}>
             <div className="relative z-0 flex flex-col h-full">
               <div className="relative h-48 w-full mb-4 flex-shrink-0">

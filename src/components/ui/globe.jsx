@@ -75,7 +75,6 @@ export function Globe({ globeConfig, data }) {
       });
     }
 
-    // remove duplicates for same lat and lng
     const filteredPoints = points.filter(
       (v, i, a) =>
         a.findIndex((v2) => ["lat", "lng"].every((k) => v2[k] === v[k])) === i

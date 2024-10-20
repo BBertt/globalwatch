@@ -25,10 +25,9 @@ const About = () => {
         ></span>
       </div>
 
-      {/* Vision Section */}
       <section className="mb-12 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 p-8 rounded-lg shadow-lg border border-gray-200">
         <div className="flex items-center justify-center mb-4">
-          <FaEye className="text-blue-600 w-8 h-8 mr-2" /> {/* Vision Icon */}
+          <FaEye className="text-blue-600 w-8 h-8 mr-2" />
         </div>
         <h2 className="text-3xl font-bold text-blue-600 text-center mb-4 tracking-wider">
           Vision
@@ -42,10 +41,9 @@ const About = () => {
         </p>
       </section>
 
-      {/* Mission Section */}
       <section className="mb-12 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 p-8 rounded-lg shadow-lg border border-gray-200">
         <div className="flex items-center justify-center mb-4">
-          <FaBullseye className="text-blue-600 w-8 h-8 mr-2" /> {/* Mission Icon */}
+          <FaBullseye className="text-blue-600 w-8 h-8 mr-2" />
         </div>
         <h2 className="text-3xl font-bold text-blue-600 text-center mb-4 tracking-wider">
           Mission
@@ -63,10 +61,9 @@ const About = () => {
         </p>
       </section>
 
-      {/* What We Do Section */}
       <section className="mb-8 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 p-8 rounded-lg shadow-lg border border-gray-200">
         <div className="flex items-center justify-center mb-4">
-          <FaHandsHelping className="text-blue-600 w-8 h-8 mr-2" /> {/* What We Do Icon */}
+          <FaHandsHelping className="text-blue-600 w-8 h-8 mr-2" />
         </div>
         <h2 className="text-3xl font-bold text-blue-600 text-center mb-4 tracking-wider">
           What We Do

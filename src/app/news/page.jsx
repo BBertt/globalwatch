@@ -27,7 +27,6 @@ const News = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start mt-8">
         <div className="hidden md:col-span-2 md:flex bg-black justify-center items-center"></div>
-
         <div className="col-span-12 md:col-span-8 flex flex-col justify-center">
           <ExpandableCard />
         </div>

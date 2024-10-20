@@ -101,12 +101,12 @@ body {
   @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-3xl;
 }
 
-.header_about {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-indigo-600 sm:text-3xl;
+.header_guide {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-indigo-800 sm:text-2xl;
 }
 
 .detail_text {
-  @apply mt-5 text-3xl font-medium leading-[1.25] text-gray-500 sm:text-xl;
+  @apply mt-5 text-3xl font-medium leading-[1.25] text-gray-900 sm:text-xl;
 }
 @keyframes underlineDisappear {
   0% {

@@ -47,7 +47,6 @@ export const HoverEffect = ({
         </motion.div>
       </div>
 
-      {/* Display for the first row of items */}
       <div className="col-span-1 sm:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
         {displayedFirstRowItems.map((item, idx) => (
           <Link
@@ -79,7 +78,6 @@ export const HoverEffect = ({
         ))}
       </div>
 
-      {/* Display for the second row of items */}
       <div className="col-span-1 sm:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
         {displayedSecondRowItems.map((item, idx) => (
           <Link
