@@ -12,7 +12,7 @@ const ArticleDetail = () => {
 
   useEffect(() => {
     if (id) {
-      const foundArticle = articlesData.find((item) => item.id === Number(id)); // Ensure correct ID type
+      const foundArticle = articlesData.find((item) => item.id === id);
       if (foundArticle) {
         setArticle(foundArticle);
       }
