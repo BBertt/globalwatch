@@ -10,7 +10,8 @@ GlobalWatch membantu menyelesaikan dua Tujuan Pembangunan Berkelanjutan (SDGs):
 2. Buka Globalwatch dan pastikan root folder nya adalah `globalwatch`.
 3. Pastikan bahwa Node.js telah di download, untuk version bisa di cek dengan `node -version` di terminal folder `globalwatch`. *(harus versi 18.17 atau lebih)*
 4. Lakukan steps berikut di terminal untuk memastikan bahwa dependencies telah ada:
-	- `npm install framer-motion clsx tailwind-merge`
+	- `npm install framer-motion clsx tailwind-merge react-icons`
+	- `npm install three three-globe @react-three/fiber @react-three/drei`
 	- `npm install bcrpyt mongodb mongoose next-auth`
 5. Untuk dijalankan lakukan `npm run dev` di terminal.
 6. lanjut ke browser dan ke website `http://localhost:3000`.
