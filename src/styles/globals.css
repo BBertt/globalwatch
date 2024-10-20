@@ -43,3 +43,7 @@ body {
 .head_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
 }
+
+.body_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-3xl;
+}

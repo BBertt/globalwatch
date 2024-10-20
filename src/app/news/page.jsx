@@ -5,21 +5,21 @@ import Link from "next/link";
 const news = () => {
   return (
     <div className="container mx-auto p-6 h-screen">
-      <h1 className="head_text text-center font-bold mb-4"><span className="blue_gradient">News</span></h1>
+      <h1 className="head_text text-center font-bold mb-4">
+        <span className="blue_gradient">News</span>
+      </h1>
       <div className="grid grid-cols-12 gap-6 h-full items-start">
-        {/* Left */}
-        <div className="col-span-3 bg-black flex justify-center items-center">
+        {/* Left - Reduced column span */}
+        <div className="col-span-2 bg-black flex justify-center items-center">
           {/* Content removed for brevity */}
         </div>
-        {/* Mid - News */}
-        <div className="col-span-6 flex flex-col justify-center">
+        {/* Mid - News - Increased column span */}
+        <div className="col-span-8 flex flex-col justify-center">
           <ExpandableCard />
         </div>
-        {/* Right - Donation */}
-        <div className="col-span-3 bg-theme flex flex-col items-center justify-center p-4">
-          <h2 className="text-lg font-bold text-white mb-4">
-            Support Our Cause
-          </h2>
+        {/* Right - Donation - Reduced column span */}
+        <div className="col-span-2 bg-theme flex flex-col items-center justify-center p-4">
+          <h2 className="text-lg font-bold text-white mb-4">Support Our Cause</h2>
           <p className="text-white text-center mb-6">
             Every penny counts. Help those in need and make a difference in their lives today.
           </p>
