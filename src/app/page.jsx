@@ -7,7 +7,7 @@ const Page = () => {
     <div className="container mx-auto p-6">
       <GlobeDemo />
       <div className="flex justify-start mt-4">
-        <h1 className="blue_gradient_border text-4xl font-bold cursor-pointer">
+        <h1 className="blue_gradient_border text-5xl font-bold cursor-pointer">
           Related News
         </h1>
       </div>
